@@ -40,6 +40,7 @@ android {
 
 dependencies {
 
+    implementation("androidx.preference:preference:1.2.1")
     val nav_version = "2.5.3"
     // Kotlin
     implementation("androidx.navigation:navigation-fragment-ktx:$nav_version")
