@@ -33,12 +33,7 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnTercerFragment.setOnClickListener{
-            findNavController().navigate(R.id.action_firstFragment_to_thirdFragment)
-        }
-        binding.btnCuartoFragment.setOnClickListener{
-            findNavController().navigate(R.id.action_firstFragment_to_fourthFragment)
-        }
+        //Codigo
     }
 
 }

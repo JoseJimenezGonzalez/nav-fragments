@@ -25,8 +25,6 @@ class ThirdFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.btnTercerToPrimerFragment.setOnClickListener{
-            findNavController().popBackStack()
-        }
+        //Codigo
     }
 }

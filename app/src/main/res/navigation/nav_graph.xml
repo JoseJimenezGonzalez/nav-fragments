@@ -9,14 +9,7 @@
         android:id="@+id/firstFragment"
         android:name="com.example.myapplication.FirstFragment"
         android:label="fragment_first"
-        tools:layout="@layout/fragment_first" >
-        <action
-            android:id="@+id/action_firstFragment_to_thirdFragment"
-            app:destination="@id/thirdFragment" />
-        <action
-            android:id="@+id/action_firstFragment_to_fourthFragment"
-            app:destination="@id/fourthFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_first" />
     <fragment
         android:id="@+id/secondFragment"
         android:name="com.example.myapplication.SecondFragment"
