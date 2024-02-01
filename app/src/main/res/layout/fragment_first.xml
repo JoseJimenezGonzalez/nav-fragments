@@ -7,15 +7,16 @@
     tools:context=".FirstFragment"
     android:id="@+id/firstFragment">
 
-    <TextView
-        android:text="Primer fragment"
+    <Button
+        android:id="@+id/btnNotification"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent">
-    </TextView>
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:text="Generar notificacion">
+    </Button>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

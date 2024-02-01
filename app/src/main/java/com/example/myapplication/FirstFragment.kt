@@ -1,11 +1,17 @@
 package com.example.myapplication
 
+import android.app.NotificationChannel
+import android.app.NotificationManager
+import android.content.Context
+import android.content.Context.NOTIFICATION_SERVICE
+import android.os.Build
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.core.app.NotificationCompat
 import androidx.navigation.Navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import com.example.myapplication.databinding.FragmentFirstBinding
@@ -34,6 +40,10 @@ class FirstFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //Codigo
+
+        binding.btnNotification.setOnClickListener {
+            showNotification(requireContext(), "¡Nueva notificación!", "Contenido de la notificación.")
+        }
     }
 
 }
