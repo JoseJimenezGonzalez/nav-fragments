@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group>
+    <item
+        android:id="@+id/nav_add"
+        android:icon="@drawable/ic_add"
+        android:title="Agregar">
+    </item>
+
+    <item
+        android:id="@+id/nav_see"
+        android:icon="@drawable/ic_see"
+        android:title="Ver">
+    </item>
+
+    <item
+        android:id="@+id/nav_edit"
+        android:icon="@drawable/ic_edit"
+        android:title="Editar">
+    </item>
+</group>
+</menu>
