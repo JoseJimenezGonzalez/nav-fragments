@@ -9,8 +9,11 @@ import android.view.ViewGroup
 import androidx.annotation.MenuRes
 import androidx.appcompat.widget.PopupMenu
 import androidx.navigation.fragment.findNavController
+import androidx.viewpager2.widget.ViewPager2
 import com.example.myapplication.databinding.FragmentFirstBinding
 import com.example.myapplication.databinding.FragmentThirdBinding
+import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 
 class ThirdFragment : Fragment() {
 
@@ -29,45 +32,15 @@ class ThirdFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         //Codigo
+        val viewPager: ViewPager2 = view.findViewById(R.id.pager)
+        val tabLayout: TabLayout = view.findViewById(R.id.tab_layout)
 
-        binding.ivPopupMenu.setOnClickListener {v: View ->
-            showMenu(v, R.menu.popup_menu)
-        }
-    }
+        val adapter = ViewPagerAdapter(childFragmentManager, lifecycle)
+        viewPager.adapter = adapter
 
-    private fun showMenu(v: View, @MenuRes menuRes: Int) {
-        val popup = PopupMenu(requireContext(), v)
-        popup.menuInflater.inflate(menuRes, popup.menu)
-
-        popup.setOnMenuItemClickListener { menuItem ->
-            when (menuItem.itemId) {
-                R.id.nav_add -> {
-
-                    val navController = findNavController()
-
-                    val transaction = requireActivity().supportFragmentManager.beginTransaction()
-                    transaction.replace(R.id.nav_host_fragment, Popup1Fragment())
-                    transaction.addToBackStack(null)
-                    transaction.commit()
-
-
-                    true
-                }
-                R.id.nav_edit -> {
-                    //navigateToDestination(R.id.)
-                    true
-                }
-                // Agrega más casos según tus opciones de menú
-                else -> false
-            }
-        }
-
-        popup.setOnDismissListener {
-
-        }
-
-        // Show the popup menu.
-        popup.show()
+        TabLayoutMediator(tabLayout, viewPager) { tab, position ->
+            tab.text = "Tab ${position + 1}"
+        }.attach()
     }
 
 }
